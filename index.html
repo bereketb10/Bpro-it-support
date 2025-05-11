@@ -18,17 +18,19 @@
             color: var(--dark);
         }
         header.hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
             background-size: cover;
+            background-position: center;
             color: white;
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 6rem 1rem;
         }
         nav {
             background: var(--primary);
             padding: 1rem;
             position: sticky;
             top: 0;
+            z-index: 100;
         }
         nav ul {
             display: flex;
@@ -44,12 +46,14 @@
             font-weight: 500;
             padding: 0.5rem 1rem;
             border-radius: 4px;
+            transition: all 0.3s ease;
         }
         nav a:hover {
             background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
         }
         section {
-            padding: 3rem 1rem;
+            padding: 4rem 1rem;
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -61,24 +65,41 @@
         .service-card {
             background: white;
             border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1.8rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .service-card h3 {
+            color: var(--primary);
+            margin-top: 0;
         }
         .form-container {
             background: white;
             border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             max-width: 600px;
             margin: 0 auto;
         }
         input, textarea, select, button {
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
+            padding: 0.8rem;
+            margin-bottom: 1.2rem;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 6px;
             font-family: inherit;
+            font-size: 1rem;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.8rem center;
+            background-size: 1.2rem;
         }
         button {
             background: var(--primary);
@@ -86,84 +107,140 @@
             font-weight: bold;
             border: none;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            padding: 1rem;
         }
         button:hover {
             background: #1d4ed8;
+            transform: translateY(-2px);
         }
         footer {
             background: var(--dark);
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
+            padding: 2.5rem;
+            margin-top: 3rem;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .contact-info svg {
+            width: 1.2rem;
+            height: 1.2rem;
+            fill: currentColor;
         }
     </style>
 </head>
 <body>
     <header class="hero">
-        <h1>Bpro IT Support</h1>
-        <p>Reliable tech solutions for businesses and individuals</p>
+        <h1 style="font-size: 2.8rem; margin-bottom: 1rem;">Bpro IT Support</h1>
+        <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto;">Expert technology solutions tailored to your business and personal needs</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact">Get a Quote</a></li>
         </ul>
     </nav>
 
     <section id="about">
-        <h2>About Our Company</h2>
-        <p>Bpro IT Support provides professional technical assistance for both businesses and home users. Our certified technicians deliver fast, reliable service with transparent pricing.</p>
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 2rem;">About Our Company</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem;">Bpro IT Support is a premier technology service provider based in Ethiopia, specializing in comprehensive IT solutions for businesses and individuals. Our team of certified professionals combines technical expertise with a customer-first approach to deliver exceptional service.</p>
+            <p style="font-size: 1.1rem;">We pride ourselves on rapid response times, transparent pricing, and solutions that are tailored to your specific requirements. Whether you need emergency data recovery or a complete network overhaul, we have the skills and experience to get the job done right.</p>
+        </div>
     </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
+    <section id="services" style="background-color: #f8fafc;">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 2rem;">Our Professional Services</h2>
         <div class="services-grid">
             <div class="service-card">
-                <h3>Computer Repair</h3>
-                <p>Hardware diagnostics, component replacement, and performance optimization.</p>
+                <h3>Computer Repair & Maintenance</h3>
+                <p>Comprehensive diagnostics, hardware repairs, and performance optimization for all desktop and laptop systems. We use genuine parts and follow manufacturer guidelines.</p>
             </div>
             <div class="service-card">
-                <h3>Network Setup</h3>
-                <p>Wi-Fi installation, troubleshooting, and security configuration.</p>
+                <h3>Data Recovery Services</h3>
+                <p>Professional recovery of deleted or lost data from hard drives, SSDs, USB drives, and other storage media. We handle even the most complex cases with specialized tools.</p>
             </div>
             <div class="service-card">
-                <h3>Virus Removal</h3>
-                <p>Complete malware scanning and removal with protection setup.</p>
+                <h3>Network Solutions</h3>
+                <p>Complete wired and wireless network setup, including secure configurations, troubleshooting, and performance optimization for homes and businesses.</p>
+            </div>
+            <div class="service-card">
+                <h3>Printer Services</h3>
+                <p>Wireless printer setup, troubleshooting, maintenance, and repair for all major brands. We ensure seamless connectivity across all your devices.</p>
+            </div>
+            <div class="service-card">
+                <h3>Virus & Malware Removal</h3>
+                <p>Thorough scanning and elimination of viruses, spyware, and ransomware with post-cleanup protection setup to prevent future infections.</p>
+            </div>
+            <div class="service-card">
+                <h3>Software Support</h3>
+                <p>Installation, configuration, and troubleshooting for operating systems, productivity software, and specialized applications.</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 1.5rem;">Request Service</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem; font-size: 1.1rem;">Complete the form below and our team will contact you within 2 business hours to discuss your requirements and schedule an appointment.</p>
+        
         <div class="form-container">
             <form action="https://formsubmit.co/bereket.emerald@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="name" placeholder="Your Full Name" required>
+                <input type="email" name="email" placeholder="Your Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number (e.g., +251 19 34 23 77 79)" required>
                 <select name="service" required>
-                    <option value="" disabled selected>Select Service Needed</option>
+                    <option value="" disabled selected>Select Required Service</option>
                     <option value="Computer Repair">Computer Repair</option>
+                    <option value="Data Recovery">Data Recovery</option>
                     <option value="Network Setup">Network Setup</option>
+                    <option value="Printer Services">Printer Services</option>
                     <option value="Virus Removal">Virus Removal</option>
-                    <option value="Other">Other</option>
+                    <option value="Other">Other Service</option>
                 </select>
-                <textarea name="message" rows="5" placeholder="Describe your issue..." required></textarea>
-                <button type="submit">Send Message</button>
+                <textarea name="message" rows="6" placeholder="Please describe your requirements in detail..." required></textarea>
+                <button type="submit">Submit Service Request</button>
                 
                 <!-- FormSubmit configuration -->
-                <input type="hidden" name="_subject" value="New Contact from Bpro IT Website">
-                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_subject" value="New Service Request - Bpro IT Support">
+                <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_next" value="https://bereketb10.github.io/Bpro-it-support/thank-you.html">
+                <input type="hidden" name="_captcha" value="false">
             </form>
         </div>
     </section>
 
     <footer>
-        <p>© 2024 Bpro IT Support | Email: bereket.emerald@gmail.com</p>
+        <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">© 2024 Bpro IT Support. All rights reserved.</p>
+        <div class="contact-info">
+            <a href="mailto:bereket.emerald@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                bereket.emerald@gmail.com
+            </a>
+            <a href="tel:+2511934237779">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                +251 19 34 23 77 79
+            </a>
+        </div>
     </footer>
 </body>
 </html>
