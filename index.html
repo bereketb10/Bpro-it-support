@@ -1,164 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>B-PRO IT Support</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BPRO IT Support</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
+      background: #f2f2f2;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
     }
-    header {
-      background: #004080;
-      color: #fff;
-      padding: 40px 20px;
+    h1 {
+      color: #2c3e50;
       text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #004080;
-      margin-bottom: 10px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 10px 0;
-      padding-left: 20px;
-      position: relative;
-    }
-    ul li::before {
-      content: "✔";
-      color: green;
-      position: absolute;
-      left: 0;
-    }
-    .contact {
-      background: #e6f0ff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    .contact a {
-      color: #004080;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .testimonials {
-      font-style: italic;
-      border-left: 4px solid #ccc;
-      padding-left: 15px;
-      margin: 10px 0;
     }
     form {
       background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    form input, form textarea {
+    input, textarea, button {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       margin: 10px 0;
       border: 1px solid #ccc;
-      border-radius: 5px;
+      border-radius: 8px;
     }
-    form button {
-      background: #004080;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    footer {
-      background: #004080;
+    button {
+      background: #2c3e50;
       color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #1a252f;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>B-PRO IT Support</h1>
-  <p>Your Tech, Our Priority</p>
-</header>
-
-<div class="container">
-  <div class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Virus & Malware Removal</li>
-      <li>Data Backup & Recovery</li>
-      <li>Network Setup & Maintenance</li>
-      <li>Cloud Solutions & Migration</li>
-      <li>Remote & On-Site Support</li>
-      <li>PC Optimization & Repairs</li>
-      <li>Business IT Consulting</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li>24/7 Reliable Support</li>
-      <li>Certified Technicians</li>
-      <li>Fast, Friendly Service</li>
-      <li>Clear Communication – No Tech Jargon</li>
-      <li>Affordable Packages for All Needs</li>
-    </ul>
-  </div>
-
-  <div class="section contact">
-    <h2>Contact Us</h2>
-    <p><strong>Phone:</strong> <a href="tel:+2511934237779">+251 193 423 7779</a></p>
-    <p><strong>Email:</strong> <a href="mailto:bereket.emerald@gmail.com">bereket.emerald@gmail.com</a></p>
-    <p><strong>Available:</strong> 24/7 – Call us anytime!</p>
-  </div>
-
-  <div class="section">
-    <h2>Request a Free Tech Assessment</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <input type="tel" placeholder="Phone Number" />
-      <textarea rows="4" placeholder="Describe your issue..." required></textarea>
-      <button type="submit">Submit Request</button>
-    </form>
-  </div>
-
-  <div class="section">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonials">“Fast, professional, and friendly service. Highly recommend B-PRO!” – Mesfin T.</div>
-    <div class="testimonials">“Solved a network issue in under an hour. Life saver!” – Rahel A.</div>
-  </div>
-</div>
-
-<footer>
-  &copy; 2025 B-PRO IT Support. All rights reserved.
-</footer>
+  <h1>Request a Free Tech Assessment</h1>
+  <form action="https://formsubmit.co/your@email.com" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
+    <textarea name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+    <button type="submit">Submit Request</button>
+  </form>
 
 </body>
 </html>
