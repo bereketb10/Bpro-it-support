@@ -1,125 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bpro IT Support</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-
-    header {
-      background: #222;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    nav {
-      background: #444;
-      color: white;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .form-container {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    input, textarea, button {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      background: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bpro IT Support - Professional Tech Solutions</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+        }
+        header.hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3');
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+        nav {
+            background: var(--primary);
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        section {
+            padding: 3rem 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .form-container {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+        button {
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
+    <header class="hero">
+        <h1>Bpro IT Support</h1>
+        <p>Reliable tech solutions for businesses and individuals</p>
+    </header>
 
-<header>
-  <h1>Bpro IT Support</h1>
-  <p>Professional Tech Help When You Need It</p>
-</header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <section id="about">
+        <h2>About Our Company</h2>
+        <p>Bpro IT Support provides professional technical assistance for both businesses and home users. Our certified technicians deliver fast, reliable service with transparent pricing.</p>
+    </section>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>We are a professional IT support company helping individuals and businesses solve their tech problems. Whether it's hardware, software, or networking — we’ve got you covered.</p>
-</section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Computer Repair</h3>
+                <p>Hardware diagnostics, component replacement, and performance optimization.</p>
+            </div>
+            <div class="service-card">
+                <h3>Network Setup</h3>
+                <p>Wi-Fi installation, troubleshooting, and security configuration.</p>
+            </div>
+            <div class="service-card">
+                <h3>Virus Removal</h3>
+                <p>Complete malware scanning and removal with protection setup.</p>
+            </div>
+        </div>
+    </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <ul>
-    <li>Computer Repair and Maintenance</li>
-    <li>Network Setup and Troubleshooting</li>
-    <li>Software Installation and Support</li>
-    <li>Virus and Malware Removal</li>
-    <li>Data Backup and Recovery</li>
-  </ul>
-</section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="form-container">
+            <form action="https://formsubmit.co/bereket.emerald@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <select name="service" required>
+                    <option value="" disabled selected>Select Service Needed</option>
+                    <option value="Computer Repair">Computer Repair</option>
+                    <option value="Network Setup">Network Setup</option>
+                    <option value="Virus Removal">Virus Removal</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea name="message" rows="5" placeholder="Describe your issue..." required></textarea>
+                <button type="submit">Send Message</button>
+                
+                <!-- FormSubmit configuration -->
+                <input type="hidden" name="_subject" value="New Contact from Bpro IT Website">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="https://bereketb10.github.io/Bpro-it-support/thank-you.html">
+            </form>
+        </div>
+    </section>
 
-<section id="contact">
-  <h2>Request a Free Tech Assessment</h2>
-  <div class="form-container">
-    <form action="https://formsubmit.co/bereket.emerald@gmail.com" method="POST">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <textarea name="issue" rows="5" placeholder="Describe your issue..." required></textarea>
-      <button type="submit">Submit Request</button>
-    </form>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Bpro IT Support. All rights reserved.</p>
-</footer>
-
+    <footer>
+        <p>© 2024 Bpro IT Support | Email: bereket.emerald@gmail.com</p>
+    </footer>
 </body>
 </html>
